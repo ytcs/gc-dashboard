@@ -10,6 +10,8 @@ from scipy.stats import gaussian_kde
 
 import plotly.express as px
 
+st.set_page_config(page_title="Gold Price Visualizer", page_icon='📈', layout="centered", initial_sidebar_state="auto", menu_items=None)
+
 s = Stock('GC=F')
 fred = Fred(api_key='147c83da741e258846d44af26794a872')
 
