@@ -1,0 +1,6 @@
+fredapi
+wallstreet
+pandas
+numpy
+sklearn
+plotly
