@@ -36,4 +36,5 @@ current_gold = gold.Open.values[-1]
 k = gaussian_kde(df.eval('Open-Predict'))
 fig=px.line(x=a*current_cpi+b*current_treasury+c+np.linspace(-350,350,101),y=np.round(k(np.linspace(-350,350,101)),4),
             labels={'x':'Gold Price','y':'Probability Density'}, title=f"Gold Price Prediction as of {df.index[-1].strftime('%D')}")
+fig.add_vline(x=current_gold, line_width=3, line_dash="dash", line_color="green")
 st.plotly_chart(fig)
